@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package greetor;
+
+option java_package = "com.thoughtworks.greetor";
+option java_outer_classname = "GreetorProtos";
+option java_multiple_files = true;
+
+service Greetor{
+    rpc greetPerson(GreetorRequest) returns (GreetorResponse);
+}
+
+message GreetorRequest{
+    string name = 1;
+}
+
+message GreetorResponse{
+    string greetings = 1;
+}
